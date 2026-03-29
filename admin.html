@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Login | The Digital Atelier</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        :root {
+            --primary: #facc15;
+            --primary-dark: #eab308;
+            --background: #09090b;
+            --surface: rgba(18, 18, 22, 0.7);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Manrope', sans-serif;
+            background: var(--background);
+            color: #e4e4e7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h2, h3, .font-headline {
+            font-family: 'Noto Serif', serif;
+        }
+
+        /* PARTICLES */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: radial-gradient(circle at center, #18181b 0%, #09090b 100%);
+        }
+
+        /* GLASS PANEL */
+        .box {
+            background: var(--surface);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(250, 204, 21, 0.15);
+            box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.7);
+            padding: 3.5rem;
+            border-radius: 8px;
+            width: 440px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            background: rgba(9, 9, 11, 0.9);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .logo-text {
+            font-family: 'Noto Serif', serif;
+            font-style: italic;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+        }
+
+        nav a {
+            color: #a1a1aa;
+            text-decoration: none;
+            margin-left: 2.5rem;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* INPUTS */
+        .input-group {
+            position: relative;
+            margin-bottom: 1.25rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            outline: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 0.85rem;
+            letter-spacing: 0.025em;
+        }
+
+        input:focus {
+            border-color: var(--primary);
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 20px rgba(250, 204, 21, 0.1);
+            transform: translateY(-1px);
+        }
+
+        input::placeholder {
+            color: #52525b;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        /* BUTTONS */
+        .btn-gold {
+            width: 100%;
+            padding: 1.1rem;
+            background: linear-gradient(135deg, #facc15 0%, #ca8a04 100%);
+            color: #000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-size: 10px;
+            margin-top: 1rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -10px rgba(250, 204, 21, 0.6);
+            filter: brightness(1.1);
+        }
+
+        .btn-gold:active {
+            transform: translateY(0);
+        }
+
+        /* PROFILES */
+        .profiles {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .profile {
+            width: 90px;
+            text-align: center;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile-circle {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(24, 24, 27, 0.9);
+            position: relative;
+        }
+
+        .profile:hover .profile-circle {
+            border-color: rgba(250, 204, 21, 0.4);
+            transform: translateY(-6px) scale(1.05);
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
+        }
+
+        .profile.selected .profile-circle {
+            box-shadow: 0 0 30px rgba(250, 204, 21, 0.4);
+            border: 2px solid var(--primary);
+            transform: scale(1.15) translateY(-6px);
+        }
+
+        .role-label {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-top: 0.85rem;
+            color: #71717a;
+            transition: color 0.3s;
+        }
+
+        .profile.selected .role-label {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* PIN BOX */
+        .pin-box {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            display: none;
+            animation: slideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .pin-box h3 {
+            font-size: 13px;
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+            letter-spacing: 0.05em;
+        }
+
+        .pin-input {
+            letter-spacing: 1.5rem;
+            text-align: center;
+            font-size: 26px;
+            font-weight: 800;
+            padding-left: 1.75rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* SWITCH */
+        .switch {
+            position: absolute;
+            right: 48px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 20px;
+        }
+
+        .switch input { display: none; }
+
+        .slider {
+            position: absolute;
+            background: #27272a;
+            border-radius: 34px;
+            top: 0; left: 0; right: 0; bottom: 0;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: 0.4s;
+        }
+
+        .slider:before {
+            content: "";
+            position: absolute;
+            height: 12px;
+            width: 12px;
+            left: 3px;
+            bottom: 3px;
+            background: #52525b;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+
+        input:checked + .slider {
+            background: rgba(250, 204, 21, 0.15);
+            border-color: var(--primary);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(20px);
+            background: var(--primary);
+        }
+
+        /* FOOTER */
+        footer {
+            position: fixed;
+            bottom: 2.5rem;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            color: #3f3f46;
+        }
+
+        #error {
+            color: #f87171;
+            font-size: 11px;
+            margin-top: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.075em;
+            min-height: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+<nav>
+<div class="logo-text text-xl">The Digital Atelier</div>
+<div class="flex items-center">
+<a href="index.html">Collection</a>
+<a href="#">Support</a>
+</div>
+<label class="switch">
+<input onclick="toggleMode()" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</nav>
+<div id="particles-js"></div>
+<div class="box">
+<h2 class="text-3xl italic font-bold text-yellow-400 mb-10 tracking-tight">Administrative Portal</h2>
+<div class="space-y-4">
+<div class="input-group">
+<input id="email" placeholder="Email Credentials" type="email"/>
+</div>
+<div class="input-group">
+<input id="password" placeholder="Access Key" type="password"/>
+</div>
+<button class="btn-gold" onclick="login()">Authenticate</button>
+</div>
+<div id="error"></div>
+<div class="profiles" id="profiles"></div>
+<div class="pin-box" id="pinBox">
+<h3 class="italic" id="pinTitle">Verify Identity</h3>
+<div class="input-group">
+<input class="pin-input" id="pin" maxlength="4" placeholder="••••" type="password"/>
+</div>
+<button class="btn-gold" onclick="verifyPin()">Verify Access</button>
+</div>
+</div>
+<footer>
+        © 2024 Srinagar Models Agency • Elite Division
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+        function toggleMode(){
+            document.body.classList.toggle("dark");
+        }
+
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 60 },
+                color: { value: "#facc15" },
+                shape: { type: "circle" },
+                opacity: { value: 0.15 },
+                size: { value: 1.5 },
+                line_linked: {
+                    enable: true,
+                    distance: 180,
+                    color: "#facc15",
+                    opacity: 0.08,
+                    width: 0.8
+                },
+                move: {
+                    enable: true,
+                    speed: 1.2
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "bubble" }
+                },
+                modes: {
+                    bubble: { distance: 200, size: 4, duration: 2, opacity: 0.4 }
+                }
+            }
+        });
+    </script>
+<script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+        const app = initializeApp({
+            apiKey: "AIzaSyDS_OdkRPDCEjjVxImCQj2AL-8-DQ2hxjc",
+            authDomain: "model-catalog-web.firebaseapp.com",
+            projectId: "model-catalog-web"
+        });
+
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        let allProfiles = [];
+        let selectedProfile = null;
+
+        const emailEl = document.getElementById("email");
+        const passwordEl = document.getElementById("password");
+        const errorEl = document.getElementById("error");
+
+        document.addEventListener("keydown", function(e){
+            if(e.key === "Enter"){
+                if(!selectedProfile){ login(); }
+                else{ verifyPin(); }
+            }
+        });
+
+        window.login = async function(){
+            const email = emailEl.value;
+            const password = passwordEl.value;
+
+            try {
+                errorEl.innerText = "Authenticating...";
+                await signInWithEmailAndPassword(auth, email, password);
+
+                const snap = await getDocs(collection(db, "admins"));
+                let found = false;
+
+                snap.forEach(doc => {
+                    const d = doc.data();
+                    if(d.email === email && d.approved) {
+                        allProfiles = d.profiles;
+                        showProfiles(allProfiles);
+                        found = true;
+                        errorEl.innerText = "";
+                    }
+                });
+
+                if(!found) errorEl.innerText = "Account not approved for portal access.";
+
+            } catch(err) {
+                errorEl.innerText = "Verification failed. Check credentials.";
+            }
+        };
+
+        function showProfiles(profiles) {
+            const container = document.getElementById("profiles");
+            container.innerHTML = profiles.map((p, index) => `
+                <div class="profile" style="animation-delay: ${index * 0.1}s" id="profile-${p.role}" onclick="selectProfile('${p.role}')">
+                    <div class="profile-circle">
+                        <lottie-player src="${p.image}" background="transparent" speed="0.8" style="width:55px;height:55px" loop autoplay></lottie-player>
+                    </div>
+                    <div class="role-label">${p.name}</div>
+                </div>
+            `).join("");
+        }
+
+        window.selectProfile = function(role) {
+            selectedProfile = allProfiles.find(p => p.role === role);
+            document.querySelectorAll(".profile").forEach(p => p.classList.remove("selected"));
+            document.getElementById("profile-" + role).classList.add("selected");
+            
+            const pinBox = document.getElementById("pinBox");
+            pinBox.style.display = "block";
+            document.getElementById("pinTitle").innerText = "Security Key for " + selectedProfile.name;
+            
+            const selected = document.getElementById("profile-" + role);
+            selected.scrollIntoView({ behavior: "smooth", block: "center" });
+            
+            document.getElementById("pin").focus();
+        };
+
+        window.verifyPin = function() {
+            const pin = document.getElementById("pin").value;
+            if(pin === selectedProfile.pin) {
+                localStorage.setItem("role", selectedProfile.role);
+                localStorage.setItem("profileName", selectedProfile.name);
+                window.location.href = "dashboard.html";
+            } else {
+                errorEl.innerText = "Security Key Mismatch ❌";
+                document.getElementById("pin").value = "";
+            }
+        };
+    </script>
+</body></html>

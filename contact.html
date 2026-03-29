@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact — The Digital Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "inverse-on-surface": "#313030",
+                "inverse-surface": "#e5e2e1",
+                "on-surface-variant": "#d1c6ab",
+                "surface-bright": "#3a3939",
+                "on-secondary-fixed": "#1b1c1c",
+                "on-surface": "#e5e2e1",
+                "on-tertiary": "#00363e",
+                "tertiary-container": "#33e4ff",
+                "tertiary-fixed-dim": "#15daf4",
+                "on-tertiary-fixed-variant": "#004e59",
+                "on-tertiary-container": "#006270",
+                "on-secondary": "#303030",
+                "surface-container-lowest": "#0e0e0e",
+                "primary-fixed-dim": "#eec200",
+                "on-secondary-container": "#b7b5b4",
+                "surface": "#131313",
+                "surface-variant": "#353534",
+                "on-primary-fixed-variant": "#574500",
+                "secondary-container": "#474746",
+                "tertiary-fixed": "#a0efff",
+                "on-error": "#690005",
+                "surface-dim": "#131313",
+                "secondary": "#c8c6c5",
+                "on-tertiary-fixed": "#001f25",
+                "on-primary-fixed": "#231b00",
+                "primary-container": "#facc15",
+                "error": "#ffb4ab",
+                "on-primary-container": "#6c5700",
+                "outline-variant": "#4d4632",
+                "inverse-primary": "#735c00",
+                "on-primary": "#3c2f00",
+                "on-error-container": "#ffdad6",
+                "primary-fixed": "#ffe083",
+                "on-background": "#e5e2e1",
+                "on-secondary-fixed-variant": "#474746",
+                "tertiary": "#c7f5ff",
+                "secondary-fixed-dim": "#c8c6c5",
+                "surface-container-high": "#2a2a2a",
+                "error-container": "#93000a",
+                "surface-tint": "#eec200",
+                "background": "#131313",
+                "surface-container": "#201f1f",
+                "surface-container-highest": "#353534",
+                "outline": "#9a9078",
+                "primary": "#ffecb9",
+                "secondary-fixed": "#e4e2e1",
+                "surface-container-low": "#1c1b1b"
+              },
+              fontFamily: {
+                "headline": ["Noto Serif"],
+                "body": ["Manrope"],
+                "label": ["Manrope"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(0,0,0, 0.4);
+        }
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            background: rgba(53, 53, 52, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-xl shadow-2xl shadow-black/50 flex justify-between items-center px-12 h-20">
+<div class="text-2xl font-headline font-bold text-yellow-400 tracking-tighter">
+            The Digital Atelier
+        </div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors font-serif italic tracking-tight" href="#">Models</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors font-serif italic tracking-tight" href="#">Catalog</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors font-serif italic tracking-tight" href="#">About</a>
+<a class="text-yellow-400 border-b border-yellow-400/30 pb-1 font-serif italic tracking-tight" href="#">Contact</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-2 rounded-md font-semibold tracking-wide hover:opacity-90 transition-all duration-300">
+            Login
+        </button>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto overflow-hidden">
+<!-- Hero Header -->
+<header class="mb-20">
+<h1 class="font-headline text-6xl md:text-8xl italic font-bold tracking-tighter text-primary mb-6">
+                Inquire.
+            </h1>
+<p class="font-body text-on-surface-variant text-lg md:text-xl max-w-2xl leading-relaxed">
+                Our atelier is more than a space; it is a curation of potential. Reach out to discuss talent representation, production collaboration, or press opportunities.
+            </p>
+</header>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Left: Form Section -->
+<section class="lg:col-span-7 space-y-16">
+<form class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="relative group">
+<label class="block text-xs uppercase tracking-[0.2em] text-outline mb-2">Legal Name</label>
+<input class="w-full bg-transparent border-b border-outline-variant/30 py-3 focus:outline-none focus:border-primary-container transition-colors placeholder:text-zinc-800 text-on-surface" placeholder="ALEXANDER VOGUE" type="text"/>
+</div>
+<div class="relative group">
+<label class="block text-xs uppercase tracking-[0.2em] text-outline mb-2">Electronic Mail</label>
+<input class="w-full bg-transparent border-b border-outline-variant/30 py-3 focus:outline-none focus:border-primary-container transition-colors placeholder:text-zinc-800 text-on-surface" placeholder="OFFICE@THEATELIER.COM" type="email"/>
+</div>
+</div>
+<div class="relative group">
+<label class="block text-xs uppercase tracking-[0.2em] text-outline mb-2">Subject of Inquiry</label>
+<select class="w-auto bg-transparent border-b border-outline-variant/30 py-3 focus:outline-none focus:border-primary-container transition-colors text-on-surface cursor-pointer pr-8 appearance-none">
+<option class="bg-surface text-on-surface">MODEL REPRESENTATION</option>
+<option class="bg-surface text-on-surface">COMMERCIAL BOOKING</option>
+<option class="bg-surface text-on-surface">PRESS &amp; MEDIA</option>
+<option class="bg-surface text-on-surface">GENERAL CORRESPONDENCE</option>
+</select>
+</div>
+<div class="relative group">
+<label class="block text-xs uppercase tracking-[0.2em] text-outline mb-2">Message</label>
+<textarea class="w-full bg-transparent border-b border-outline-variant/30 py-3 focus:outline-none focus:border-primary-container transition-colors placeholder:text-zinc-800 text-on-surface resize-none" placeholder="DESCRIBE THE VISION..." rows="4"></textarea>
+</div>
+<div class="pt-6">
+<button class="group flex items-center gap-4 text-primary-container font-headline italic text-2xl hover:text-primary transition-colors" type="submit">
+                            Send Correspondence
+                            <span class="material-symbols-outlined text-4xl group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</button>
+</div>
+</form>
+<!-- Press Enquiries Subsection -->
+<div class="bg-surface-container-low p-10 md:p-14 editorial-shadow rounded-lg">
+<h3 class="font-headline text-3xl italic text-on-surface mb-4">Press Enquiries</h3>
+<p class="text-on-surface-variant body-md leading-relaxed mb-8 max-w-lg">
+                        For media kits, high-resolution assets, or interview requests regarding our roster and Srinagar's burgeoning fashion scene.
+                    </p>
+<a class="inline-block border-b border-primary-container text-primary-container label-md tracking-widest uppercase pb-1 hover:text-primary hover:border-primary transition-all" href="mailto:press@srinagarmodels.com">
+                        press@srinagarmodels.com
+                    </a>
+</div>
+</section>
+<!-- Right: Info & Visual Section -->
+<aside class="lg:col-span-5 space-y-16">
+<!-- Large Editorial Image -->
+<div class="relative group overflow-hidden">
+<img class="w-full aspect-[4/5] object-cover filter grayscale hover:grayscale-0 transition-all duration-700 editorial-shadow" data-alt="dramatic high-fashion portrait of a woman with ethereal lighting against a dark textured background wearing luxury jewelry" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSBmNZkpPfW27y2-ssJoffRsz3iJoTOj2oHXifnmNAQyRiG1L8g16IIYe9Xsw-x_NtGHbqJxnBUKQQ4DhXwkMRGcm1r9Cj5nYmulfDvW5aAEm5iJAKqT5hF16dJ-6kExBlvFbc91fiViaWDme_hGJ-nD3gxhFBVveaSc08OCJCQOeXtdAh5dlKiigsOGTg9VRu1LLZHYu77K0brMounk45u60iNGtNOjTfN5WGngtFQoQw8s3Xm1bZBd8uFeBEO0x7FIxJtoZfGRo"/>
+<div class="absolute bottom-6 left-6 text-white/50 text-[10px] tracking-[0.3em] uppercase mix-blend-difference">
+                        Atelier Series 04 // Studio A
+                    </div>
+</div>
+<!-- Contact Details Card -->
+<div class="space-y-12 pl-4 border-l border-outline-variant/20">
+<div>
+<span class="block text-xs uppercase tracking-[0.2em] text-primary mb-4">The Location</span>
+<address class="not-italic font-headline text-2xl text-on-surface leading-snug">
+                            Dal Lake View Chambers<br/>
+                            Boulevard Road, Srinagar<br/>
+                            Jammu &amp; Kashmir, 190001
+                        </address>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<span class="block text-xs uppercase tracking-[0.2em] text-primary mb-2">Telephone</span>
+<p class="font-body text-lg text-on-surface">+91 194 2450000</p>
+</div>
+<div>
+<span class="block text-xs uppercase tracking-[0.2em] text-primary mb-2">Direct Mail</span>
+<p class="font-body text-lg text-on-surface">hello@srinagarmodels.com</p>
+</div>
+</div>
+<!-- Map/Artistic Representation -->
+<div class="mt-8 bg-surface-container-highest h-64 relative overflow-hidden group rounded-lg">
+<img class="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity" data-alt="abstract artistic aerial view of srinagar dal lake with misty mountains and soft golden sunlight" data-location="Srinagar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTn5nYYz_THw5s048YjKzX_cMhWG2Aaa1AnIpZ2ixkb0Unjus3OBk2ZPrdhewp5-316LahFbAMcH_u6BWzWvWBNbYg9owQJ3pSpdiOFf9wQXtrNUq2Lm7LbHlh3RAj2LMRmqH2IBHJVbctwvE_-hav6m39H7M3DjKnLIAOl8q95h6Ov0nRBp86fLB7WdH91trqCgkfSzqpYVEMRH1RNlos4j_3oq8rXKBjaHZjsM_RBYSAWCcuWfzy335q8tYQZE-4GIcoXrPY7cg"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center glass-panel px-8 py-4 editorial-shadow rounded-full">
+<span class="material-symbols-outlined text-primary-container block mb-1">location_on</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface">View Map</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 w-full py-12 px-12 border-t border-zinc-800/20 flex flex-col md:flex-row justify-between items-center">
+<div class="text-zinc-600 font-sans text-xs tracking-widest uppercase mb-6 md:mb-0">
+            © 2024 THE DIGITAL ATELIER. ALL RIGHTS RESERVED.
+        </div>
+<div class="flex gap-8">
+<a class="text-zinc-600 hover:text-yellow-400 transition-colors font-sans text-xs tracking-widest uppercase" href="#">Privacy Policy</a>
+<a class="text-zinc-600 hover:text-yellow-400 transition-colors font-sans text-xs tracking-widest uppercase" href="#">Terms of Service</a>
+<a class="text-zinc-600 hover:text-yellow-400 transition-colors font-sans text-xs tracking-widest uppercase" href="#">Press Enquiries</a>
+</div>
+</footer>
+</body></html>

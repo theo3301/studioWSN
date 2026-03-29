@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Srinagar Models Agency | Elite Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#eec200",
+              "on-error": "#690005",
+              "on-secondary-container": "#b7b5b4",
+              "on-error-container": "#ffdad6",
+              "on-tertiary-container": "#006270",
+              "inverse-surface": "#e5e2e1",
+              "primary-fixed": "#ffe083",
+              "surface-variant": "#353534",
+              "tertiary": "#c7f5ff",
+              "secondary": "#c8c6c5",
+              "on-surface": "#e5e2e1",
+              "background": "#131313",
+              "on-primary-container": "#6c5700",
+              "on-tertiary": "#00363e",
+              "tertiary-fixed-dim": "#15daf4",
+              "surface-tint": "#eec200",
+              "surface-container-low": "#1c1b1b",
+              "secondary-fixed-dim": "#c8c6c5",
+              "secondary-fixed": "#e4e2e1",
+              "on-surface-variant": "#d1c6ab",
+              "on-secondary": "#303030",
+              "error-container": "#93000a",
+              "error": "#ffb4ab",
+              "surface": "#131313",
+              "surface-container-highest": "#353534",
+              "on-primary-fixed-variant": "#574500",
+              "surface-container-high": "#2a2a2a",
+              "on-tertiary-fixed-variant": "#004e59",
+              "on-primary": "#3c2f00",
+              "primary-container": "#facc15",
+              "outline-variant": "#4d4632",
+              "on-primary-fixed": "#231b00",
+              "tertiary-fixed": "#a0efff",
+              "inverse-on-surface": "#313030",
+              "primary": "#ffecb9",
+              "on-secondary-fixed-variant": "#474746",
+              "secondary-container": "#474746",
+              "surface-bright": "#3a3939",
+              "tertiary-container": "#33e4ff",
+              "surface-container-lowest": "#0e0e0e",
+              "on-background": "#e5e2e1",
+              "on-secondary-fixed": "#1b1c1c",
+              "surface-dim": "#131313",
+              "surface-container": "#201f1f",
+              "outline": "#9a9078",
+              "inverse-primary": "#735c00",
+              "on-tertiary-fixed": "#001f25"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #09090b; /* Zinc-950 equivalent */
+            overflow-x: hidden;
+            color: #e5e2e1;
+        }
+        .gallery-container {
+            perspective: 1200px;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gallery-item {
+            position: absolute;
+            width: 380px;
+            height: 520px;
+            transition: transform 0.5s ease;
+            cursor: pointer;
+            filter: grayscale(100%);
+        }
+        .gallery-item.active {
+            filter: grayscale(0%);
+            z-index: 10;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 1px solid rgba(250, 204, 21, 0.1);
+        }
+        .glass-panel {
+            background: rgba(19, 19, 19, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-950/60 backdrop-blur-xl shadow-2xl shadow-black/40">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-headline uppercase tracking-widest text-yellow-500">ELITE</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-yellow-500 font-medium border-b border-yellow-500/50 pb-1 font-headline italic tracking-tight" href="#">Models</a>
+<a class="text-neutral-400 hover:text-neutral-100 transition-colors font-headline italic tracking-tight" href="#">New Faces</a>
+<a class="text-neutral-400 hover:text-neutral-100 transition-colors font-headline italic tracking-tight" href="#">Editorial</a>
+<a class="text-neutral-400 hover:text-neutral-100 transition-colors font-headline italic tracking-tight" href="#">Agencies</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-md font-semibold tracking-wide hover:bg-primary-fixed transition-all duration-300 transform active:scale-95">Bookings</button>
+<span class="material-symbols-outlined text-yellow-500 cursor-pointer text-2xl" data-icon="menu">menu</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section / 3D Gallery -->
+<section class="relative min-h-screen pt-32 pb-20 flex flex-col items-center justify-center overflow-hidden">
+<!-- Editorial Background Text -->
+<div class="absolute inset-0 flex items-center justify-center opacity-[0.03] select-none pointer-events-none">
+<h1 class="text-[25vw] font-headline italic tracking-tighter leading-none">ATELIER</h1>
+</div>
+<div class="text-center mb-16 z-10">
+<span class="text-primary-container uppercase tracking-[0.5em] text-xs font-semibold mb-4 block">Spring Summer 2024</span>
+<h2 class="text-6xl md:text-8xl font-headline italic text-white leading-tight">The Signature <br/> <span class="text-primary-container">Portfolio</span></h2>
+</div>
+<!-- 3D Gallery Wrapper -->
+<div class="w-full max-w-6xl mx-auto gallery-container z-10" id="gallery-root">
+<!-- Model 1 -->
+<div class="gallery-item" data-index="0">
+<img class="shadow-2xl" data-alt="Stunning female model in avant-garde editorial fashion posing against a minimalist concrete background with sharp dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZghHU2kTNqLH-ZSyC5_YpdcYLWm__aHGKxdOB-O57NBqPXL9Kv__kXKb29lpPr5wu6hkcvxy5GwW21HYutX-MH9mtB_h5PgQit4wukcA_llMtnL-otojkL1dyDa9bpNJ3rZFC8Zb_1k3uQVcOFVRYZ9vOLvecvDPiajCxd6i6sKXzCZm9QYsnnk2fDXVpebhCaROiUETw5u_BBEhHUDHmmhduok-NS1kPezZiFltWqPHoO9WHVhsmSBRxvAkdjQFw2eghMZYaCaY"/>
+<div class="absolute bottom-6 left-6 right-6 p-4 glass-panel border border-yellow-500/10">
+<p class="text-xs tracking-widest uppercase text-yellow-500 mb-1">Fashion</p>
+<h3 class="font-headline italic text-xl">Elena V.</h3>
+</div>
+</div>
+<!-- Model 2 -->
+<div class="gallery-item" data-index="1">
+<img class="shadow-2xl" data-alt="High-fashion male model wearing silk draped clothing in a sun-drenched studio with soft golden hour lighting and high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjNk7V7YPZ8QU7fQJtHzJ-x3R63QpKiBVzYh8grTXIToYvDDrfcJa3QhE9HWbZU5oDe8hjdAfZEvuDzJLK065ihBItFqGY5SPuT69R1V0ATl1xaMU2_c3ReVS8JUqQJjC3iiUd8RiAg4wHdecoRKXSHiaJhTK6wNy0nKSYusw9dS2vYe-E5Fw2fVsU2nluSa2A4-hMuKyodjEdjAG-h8cj5IA7oWL4n1aegtkMcRoQjy97kY6gfywxGpbgOedJPlEmnEp5TyC8hWA"/>
+<div class="absolute bottom-6 left-6 right-6 p-4 glass-panel border border-yellow-500/10">
+<p class="text-xs tracking-widest uppercase text-yellow-500 mb-1">Editorial</p>
+<h3 class="font-headline italic text-xl">Julian S.</h3>
+</div>
+</div>
+<!-- Model 3 -->
+<div class="gallery-item" data-index="2">
+<img class="shadow-2xl" data-alt="Editorial portrait of a model with bold fashion makeup and sleek hair wearing metallic luxury accessories in a moody studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDklH0m6MpdxKCXScSDsTaMLswxMQMj0-FS0351jPdZtaIz36oO6Dm5L2Ib6puyDnz0F4Z9662sja-wD6Z2yeHFYdrd0xwNxPST9EEz41S-mrGKPAnrjG5t82dgpoaR7LCy1j13ZjiXB7OItTenlIVMnNlb3La8o1VMXFFunEiU9PwE0ImzbYDy-V61Qc3B3d1gEndvexnUTNZMlRSzZzj6hs9rxO-yJz9-bZV8W5tIv3oPzKqM5-cm_E1dmL0qYGMlRDEPrMLaOOA"/>
+<div class="absolute bottom-6 left-6 right-6 p-4 glass-panel border border-yellow-500/10">
+<p class="text-xs tracking-widest uppercase text-yellow-500 mb-1">New Faces</p>
+<h3 class="font-headline italic text-xl">Sasha K.</h3>
+</div>
+</div>
+<!-- Model 4 -->
+<div class="gallery-item" data-index="3">
+<img class="shadow-2xl" data-alt="Male fashion model in tailored black suit with sharp jawline and dramatic lighting in a dark luxury setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY_rF_oECcjbekldC1az7_1ZzfedhyK1dt7ru7gTYuJp7vxf2KUR4dpY2B5XVVsGzkRGZyf0l6PGe_OYo2kfoh4jOTOTnnf00feCI5LNjYrqbz8uHoNEF0V_5uNik3NF4yArYtHliJhkhfWEl4TV91PUyQlz4lXkhHNmjo0a8rhQLIrNicWG1e6grC5N4SCalTza7TowRjTXPgkMua7-N7H-VHVR_1GOi1-WaVETiZYTunJnH0dF-QKvDQdr9Vge1hJ8VA8wfdp1A"/>
+<div class="absolute bottom-6 left-6 right-6 p-4 glass-panel border border-yellow-500/10">
+<p class="text-xs tracking-widest uppercase text-yellow-500 mb-1">Commercial</p>
+<h3 class="font-headline italic text-xl">Marcus L.</h3>
+</div>
+</div>
+<!-- Model 5 -->
+<div class="gallery-item" data-index="4">
+<img class="shadow-2xl" data-alt="Close-up beauty shot of female model with glowing skin and high-fashion accessories against a dark velvet background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0FFV2qJ2K4sGdyRb05N49-LwB8Wt2k9KV3AQt-e9KR622GTLLUrIuAvveGur97eH1Egn-e5611gQp5oNf3nEllXbe3-PET2cmbNco2MuiYTTl7kB1gxPeEUxvir1orjwmmUl7y4wUcf7yhW3oV9Dw5j6qxkYDaVYpbOH6BD7Emte8Ud-aBnjZ8QcRRuvP2B4LXLYCAMbcwrb6u-4cL36pNd2nW0At-PUU6IQfkmstBuZW8D-1sLN7t5egZZIDCxMpBhQ9YF619pc"/>
+<div class="absolute bottom-6 left-6 right-6 p-4 glass-panel border border-yellow-500/10">
+<p class="text-xs tracking-widest uppercase text-yellow-500 mb-1">Editorial</p>
+<h3 class="font-headline italic text-xl">Adut A.</h3>
+</div>
+</div>
+</div>
+<!-- Gallery Navigation Controls -->
+<div class="mt-12 flex items-center gap-8 z-20">
+<button class="w-12 h-12 rounded-full border border-yellow-500/30 flex items-center justify-center text-yellow-500 hover:bg-yellow-500/10 transition-all" id="prevBtn">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<div class="flex gap-3" id="pagination-dots">
+<!-- Dots injected by JS -->
+</div>
+<button class="w-12 h-12 rounded-full border border-yellow-500/30 flex items-center justify-center text-yellow-500 hover:bg-yellow-500/10 transition-all" id="nextBtn">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="bg-surface-container-lowest py-24">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="text-center">
+<div class="text-5xl font-headline italic text-primary-container mb-2">150+</div>
+<div class="text-[10px] tracking-[0.3em] uppercase text-neutral-500">Global Models</div>
+</div>
+<div class="text-center">
+<div class="text-5xl font-headline italic text-primary-container mb-2">12</div>
+<div class="text-[10px] tracking-[0.3em] uppercase text-neutral-500">Major Capitals</div>
+</div>
+<div class="text-center">
+<div class="text-5xl font-headline italic text-primary-container mb-2">400+</div>
+<div class="text-[10px] tracking-[0.3em] uppercase text-neutral-500">Editorial Covers</div>
+</div>
+<div class="text-center">
+<div class="text-5xl font-headline italic text-primary-container mb-2">25yr</div>
+<div class="text-[10px] tracking-[0.3em] uppercase text-neutral-500">Industry Legacy</div>
+</div>
+</div>
+</section>
+<!-- Categories Grid -->
+<section class="py-32 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<span class="text-primary-container uppercase tracking-[0.3em] text-xs font-semibold mb-2 block">Curation</span>
+<h2 class="text-5xl font-headline italic text-white">Refining Global <br/> Aesthetics</h2>
+</div>
+<p class="max-w-md text-neutral-400 leading-relaxed font-light">
+                    From the runways of Paris to high-impact digital campaigns, we curate talent that doesn't just represent brands—they redefine them.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Category 1 -->
+<div class="group relative aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" data-alt="Elegant street style fashion photography of model in trench coat walking through historic European architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx27G1Xf4JeAcCnPjSOX5v0ptlZQkgdRpyQ2TSIrpKMx10FQeNYqj5NZ9QzVnKJa0YXz9Q8SqiZACFkzosajpiV_2CPwF5qCkKpMF1PPB2vcrCsl19ps2tIDmIupLbfzB4VsgZFL5LaeqKDD9fnxeDkqA0ISIA8sGnN-5ykWiJJV09261rFNNfmb1fWnvmViV9SePvJaH-XGZGe58-zivBa_wxiXlZ2PH79O18EFMKaIFqK2W3uxgD_J8INVmMQWkjk5CzZA7y2AU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-10 left-10">
+<h4 class="text-3xl font-headline italic text-white mb-2">High Fashion</h4>
+<a class="text-xs tracking-widest uppercase text-yellow-500 flex items-center gap-2 group/link" href="#">
+                            Explore <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="group relative aspect-[3/4] overflow-hidden md:mt-12">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" data-alt="Editorial beauty shot of model with vibrant avant-garde eye makeup and sleek hair against clean studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLWI6V65FTiVwyecTMwtbgLmkxBJLzotPNQUAEufJHHA-_zbg1QECZ1pVtnsz3aIGVnHSHZtcnmkeF-_2KPmOv5z6ARwlANh3M2Krow6422QG5MALsc3UevRiFigAZYTpHA7TulZ0ARPQFsL7iQQo8qITrNqjS7xmz77GP-dNm7V3r82N3B1EAoR3YBR2T1a1abBE7t88PSnksYDm7XgtxStI78Xf35WNqpIM9VPtsAQ_-XUBBMC640eMCu7_b-etSFWb-ZMVal2U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-10 left-10">
+<h4 class="text-3xl font-headline italic text-white mb-2">Commercial</h4>
+<a class="text-xs tracking-widest uppercase text-yellow-500 flex items-center gap-2 group/link" href="#">
+                            Explore <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="group relative aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" data-alt="Full body shot of model in minimalist high-fashion athletic wear posing in a high-tech modern studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAML1Jnb0b2Gn7RrYjm-Kre--VhZM4bAYynWxu6qj9z2py07g7dah3_wWoulwx5ynsiC1lqGORcE3qAzNczNShbn-Tp7CQC85gyLO2AG1aTmbP03GK09-9qXMoVrxd_hEigMs-KCZv8C48L-J4yQBNbszRcFN9jtT5v5D31ey59JqCX-17xc40xz_pr3ZWE1luNpsbNY2gIhDHrZLO8TIuLBzWD8ob_YYQTFV7yIK6YekqhHpjmL_PkYXghUZF8uQwpYxtOFibMk_M"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-10 left-10">
+<h4 class="text-3xl font-headline italic text-white mb-2">Development</h4>
+<a class="text-xs tracking-widest uppercase text-yellow-500 flex items-center gap-2 group/link" href="#">
+                            Explore <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Book Your Signature Talent Section -->
+<section class="relative py-40 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20 scale-110 blur-sm" data-alt="Blurred atmospheric background of a fashion runway backstage with models and soft stage lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGUk2wkF3U-1cyaeZqrJ7_sPFpAMn4v1uDyRrsgJcadJ7Id-mWQQRreyWLgimQYxJZKCdcDbQiX_ciR_upeTXmInbRv15UdG0EtRc1rfjBF-m_JbShGL77JQMUYFmBY4QM2twRWzef9TpRnB-qPT9C3mE0yHffvcEfINzSrDNDPzNa0iRJpJczjqFj7fygvEOMdR3kDwMGptFZhhUcNTpzAs8Q-tPjj4pcapJG9BhzkGAlrqlrCqEw0odKtB-sk5f-hYJbf833QBQ"/>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto text-center px-6">
+<h2 class="text-5xl md:text-7xl font-headline italic text-white mb-8">Book Your <br/> Signature <span class="text-primary-container">Talent</span></h2>
+<p class="text-lg text-neutral-400 mb-12 font-light tracking-wide max-w-2xl mx-auto">
+                Connect with our casting directors for international bookings, editorial commissions, and brand partnerships.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="w-full sm:w-auto px-10 py-5 bg-primary-container text-on-primary-container text-sm font-bold tracking-[0.2em] uppercase rounded hover:bg-primary-fixed transition-all duration-300">
+                    Inquire Now
+                </button>
+<button class="w-full sm:w-auto px-10 py-5 border border-yellow-500/30 text-yellow-500 text-sm font-bold tracking-[0.2em] uppercase rounded hover:bg-yellow-500/10 transition-all duration-300">
+                    View Catalog
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-neutral-950 w-full py-20 border-t border-neutral-900 flex flex-col items-center gap-8 px-4">
+<div class="flex gap-12 text-neutral-600 font-sans text-[10px] tracking-[0.2em] uppercase">
+<a class="hover:text-neutral-200 transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-neutral-200 transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-neutral-200 transition-colors" href="#">Contact</a>
+<a class="hover:text-neutral-200 transition-colors" href="#">Press</a>
+</div>
+<div class="mt-8 text-neutral-700 font-sans text-[10px] tracking-[0.2em] uppercase">
+            © 2024 THE DIGITAL ATELIER. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+<script>
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const dotsContainer = document.getElementById('pagination-dots');
+        let currentIndex = 2; // Start with the middle item active
+
+        // Initialize dots
+        galleryItems.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.className = `w-1.5 h-1.5 rounded-full transition-all duration-300 ${i === currentIndex ? 'bg-yellow-500 w-6' : 'bg-neutral-700'}`;
+            dotsContainer.appendChild(dot);
+        });
+
+        function updateGallery() {
+            galleryItems.forEach((item, index) => {
+                const diff = index - currentIndex;
+                const absDiff = Math.abs(diff);
+                
+                // Active item logic
+                if (diff === 0) {
+                    item.classList.add('active');
+                    gsap.to(item, {
+                        x: 0,
+                        z: 100,
+                        rotateY: 0,
+                        scale: 1.1,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power3.out"
+                    });
+                } else {
+                    item.classList.remove('active');
+                    const direction = diff > 0 ? 1 : -1;
+                    const xOffset = direction * (absDiff * 220 + 100);
+                    const rotation = direction * -35;
+                    
+                    gsap.to(item, {
+                        x: xOffset,
+                        z: -150 * absDiff,
+                        rotateY: rotation,
+                        scale: 0.85,
+                        opacity: 0.7 - (absDiff * 0.15),
+                        duration: 0.8,
+                        ease: "power3.out"
+                    });
+                }
+            });
+
+            // Update dots
+            const dots = dotsContainer.querySelectorAll('div');
+            dots.forEach((dot, i) => {
+                if (i === currentIndex) {
+                    dot.className = 'w-6 h-1.5 rounded-full bg-yellow-500 transition-all duration-300';
+                } else {
+                    dot.className = 'w-1.5 h-1.5 rounded-full bg-neutral-700 transition-all duration-300';
+                }
+            });
+        }
+
+        // Event Listeners
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentIndex = index;
+                updateGallery();
+            });
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % galleryItems.length;
+            updateGallery();
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+            updateGallery();
+        });
+
+        // Auto-play functionality
+        let autoPlay = setInterval(() => {
+            currentIndex = (currentIndex + 1) % galleryItems.length;
+            updateGallery();
+        }, 6000);
+
+        // Stop auto-play on interaction
+        const stopAutoPlay = () => clearInterval(autoPlay);
+        document.getElementById('gallery-root').addEventListener('mousedown', stopAutoPlay);
+        document.getElementById('nextBtn').addEventListener('click', stopAutoPlay);
+        document.getElementById('prevBtn').addEventListener('click', stopAutoPlay);
+
+        // Initial setup
+        window.addEventListener('load', updateGallery);
+    </script>
+</body></html>

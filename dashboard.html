@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE ATELIER | Srinagar Models Agency Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600&amp;family=Playfair+Display:wght@700;900&amp;family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-container": "#33e4ff",
+                        "on-secondary": "#303030",
+                        "inverse-on-surface": "#313030",
+                        "surface-tint": "#eec200",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-primary-fixed": "#231b00",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed-variant": "#474746",
+                        "tertiary-fixed-dim": "#15daf4",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-bright": "#3a3939",
+                        "error-container": "#93000a",
+                        "secondary-container": "#474746",
+                        "surface-container": "#201f1f",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#353534",
+                        "outline-variant": "#4d4632",
+                        "on-tertiary-fixed-variant": "#004e59",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "outline": "#9a9078",
+                        "on-primary-fixed-variant": "#574500",
+                        "tertiary-fixed": "#a0efff",
+                        "on-error": "#690005",
+                        "primary-fixed": "#ffe083",
+                        "on-tertiary": "#00363e",
+                        "on-surface-variant": "#d1c6ab",
+                        "on-tertiary-container": "#006270",
+                        "on-background": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error": "#ffb4ab",
+                        "tertiary": "#c7f5ff",
+                        "primary-fixed-dim": "#eec200",
+                        "background": "#131313",
+                        "on-primary": "#3c2f00",
+                        "surface": "#131313",
+                        "primary-container": "#facc15",
+                        "on-surface": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-variant": "#353534",
+                        "secondary": "#c8c6c5",
+                        "inverse-primary": "#735c00",
+                        "on-tertiary-fixed": "#001f25",
+                        "secondary-fixed": "#e4e2e1",
+                        "primary": "#ffecb9"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"],
+                        "display": ["Playfair Display"],
+                        "poppins": ["Poppins"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .glass-card {
+            background: rgba(32, 31, 31, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #ffecb9 0%, #facc15 100%);
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4d4632;
+        }
+    </style>
+</head>
+<body class="bg-surface-dim text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-full w-64 flex flex-col justify-between py-8 bg-neutral-950 dark:bg-[#131313] shadow-[20px_0_40px_rgba(0,0,0,0.4)] border-r border-white/5 z-50">
+<div class="space-y-12">
+<!-- Brand Header -->
+<div class="px-8">
+<h1 class="text-2xl font-bold tracking-widest text-yellow-500 dark:text-[#FACC15] uppercase font-headline">THE ATELIER</h1>
+<p class="text-[10px] tracking-[0.2em] text-neutral-500 uppercase mt-1 font-poppins">Elite Management</p>
+</div>
+<!-- Navigation Links -->
+<nav class="space-y-1">
+<a class="text-[#FACC15] font-semibold bg-white/5 border-r-2 border-[#FACC15] py-4 px-8 flex items-center gap-4 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-xs font-medium uppercase tracking-wider font-poppins">Dashboard</span>
+</a>
+<a class="text-neutral-500 hover:bg-white/5 hover:text-[#FACC15] py-4 px-8 flex items-center gap-4 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="text-xs font-medium uppercase tracking-wider font-poppins">Bookings</span>
+</a>
+<a class="text-neutral-500 hover:bg-white/5 hover:text-[#FACC15] py-4 px-8 flex items-center gap-4 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="recent_actors">recent_actors</span>
+<span class="text-xs font-medium uppercase tracking-wider font-poppins">Models</span>
+</a>
+<a class="text-neutral-500 hover:bg-white/5 hover:text-[#FACC15] py-4 px-8 flex items-center gap-4 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="text-xs font-medium uppercase tracking-wider font-poppins">Finances</span>
+</a>
+<a class="text-neutral-500 hover:bg-white/5 hover:text-[#FACC15] py-4 px-8 flex items-center gap-4 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-xs font-medium uppercase tracking-wider font-poppins">Settings</span>
+</a>
+</nav>
+</div>
+<!-- Admin Profile (Footer Tab) -->
+<div class="px-6 pt-6 border-t border-white/5">
+<div class="flex items-center gap-4 px-2 py-3 bg-surface-container-low rounded-lg group cursor-pointer hover:bg-surface-container-high transition-colors">
+<img alt="Chief Agent" class="w-10 h-10 rounded-full object-cover grayscale brightness-110" data-alt="portrait of an elegant middle-aged man in a charcoal suit, minimalist studio lighting, elite aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3_eGn9YMy9o_LWIcJtmHzTnGgaExEw-4sGGnka9z2lBOiIMsfkTnrznIhsQAUhbihpSDmVMJ_DF_CSljIGJND49ZEfqU2WGb6tC4LGo1RN___SL2vpfl5fRSCEpfxoIQK9KKWJz-1DIlLJT3agVrGjULt_ZvRZtwjosppQcTVB-LazXNP60KoaYNcqFd4lcvlrKo2qyxHKHuBk38k5_vnOOQDos-77crH--CxFU3toE2qvOts3UbZMOoXraLbKcSXkT8r3aZw2Z8"/>
+<div class="flex-1 overflow-hidden">
+<p class="text-xs font-semibold text-white truncate font-poppins">Chief Curator</p>
+<p class="text-[10px] text-neutral-500 truncate">Srinagar Office</p>
+</div>
+<span class="material-symbols-outlined text-neutral-500 group-hover:text-[#FACC15] transition-colors" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen relative">
+<!-- TopAppBar (Shared Component) -->
+<header class="sticky top-0 z-40 w-full h-20 flex justify-between items-center px-12 bg-transparent backdrop-blur-xl transition-all duration-500">
+<div class="flex items-center gap-4">
+<h2 class="font-display text-2xl text-white font-light">Morning, <span class="text-primary-container font-bold">Curator</span></h2>
+</div>
+<div class="flex items-center gap-8">
+<div class="relative group hidden md:block">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-neutral-500" data-icon="search">search</span>
+<input class="bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 text-xs focus:ring-1 focus:ring-primary-container w-64 transition-all outline-none text-on-surface" placeholder="Search talent..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2 text-neutral-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-1.5 h-1.5 bg-primary-container rounded-full"></span>
+</button>
+<button class="p-2 text-neutral-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="px-12 py-8 max-w-[1600px] mx-auto space-y-12">
+<!-- Analytics Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-2 glass-card p-8 rounded-xl flex flex-col justify-between h-48 group hover:translate-y-[-4px] transition-transform duration-500">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-500 font-poppins">Talent Growth</span>
+<span class="material-symbols-outlined text-primary-container" data-icon="trending_up">trending_up</span>
+</div>
+<div class="mt-4">
+<h3 class="font-display text-4xl text-white">+12%</h3>
+<p class="text-sm text-neutral-400 mt-1">Net expansion this quarter</p>
+</div>
+<div class="w-full h-1 bg-surface-container-highest mt-4 rounded-full overflow-hidden">
+<div class="w-[72%] h-full gold-gradient"></div>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl flex flex-col justify-between h-48 group hover:translate-y-[-4px] transition-transform duration-500">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-500 font-poppins">Booking Volume</span>
+<span class="material-symbols-outlined text-primary-container" data-icon="event_note">event_note</span>
+</div>
+<div>
+<h3 class="font-display text-4xl text-white">184</h3>
+<p class="text-sm text-neutral-400 mt-1">Confirmed sets</p>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl flex flex-col justify-between h-48 group hover:translate-y-[-4px] transition-transform duration-500">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-500 font-poppins">New Requests</span>
+<span class="material-symbols-outlined text-primary-container" data-icon="pending">pending</span>
+</div>
+<div>
+<h3 class="font-display text-4xl text-white">28</h3>
+<p class="text-sm text-neutral-400 mt-1">Awaiting review</p>
+</div>
+</div>
+</section>
+<!-- Models Management Panel -->
+<section class="space-y-6">
+<div class="flex justify-between items-end">
+<div>
+<h2 class="font-display text-3xl text-white">Model Directory</h2>
+<p class="text-neutral-500 mt-1 font-body">Managing Srinagar's premium talent pool</p>
+</div>
+<div class="flex gap-4">
+<button class="gold-gradient text-on-primary font-bold px-6 py-2.5 rounded-md text-xs uppercase tracking-widest font-poppins flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="add" data-weight="fill">add</span>
+                            Add New Model
+                        </button>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="px-8 py-5 text-[10px] font-medium uppercase tracking-widest text-neutral-500 font-poppins">Model Profile</th>
+<th class="px-8 py-5 text-[10px] font-medium uppercase tracking-widest text-neutral-500 font-poppins">Status</th>
+<th class="px-8 py-5 text-[10px] font-medium uppercase tracking-widest text-neutral-500 font-poppins">Bookings</th>
+<th class="px-8 py-5 text-[10px] font-medium uppercase tracking-widest text-neutral-500 font-poppins text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-white/5">
+<tr class="hover:bg-white/5 transition-colors cursor-pointer group">
+<td class="px-8 py-5">
+<div class="flex items-center gap-4">
+<div class="w-12 h-16 bg-neutral-800 rounded-sm overflow-hidden flex-shrink-0">
+<img alt="Model portrait" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="striking portrait of a south asian fashion model with minimalist makeup and high-fashion hair styling, cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2OlHBgVerRgNWKRg-3FtAghamwfYu-wWWsNFhInfcyEH0AHClArH8g3VYJlyP9y7q1lxXjdv4io_i3W4wSeSXRFEolM7GfLJVfzinsxfuBBsAF2rkZZBki28x4bVTN-pz0mP0c52TS_o1pzjKR-pfU9jivdB1kt7N2PehFmdvj7fLdSEZOPwpI9pQ_T67El8_urhrUW2wJwj8Ama4rEALgOG82KDnQv37hht3ZorvQHP-bBzSSKcz4bFQxiy00rlE4mCimhtb5mw"/>
+</div>
+<div>
+<p class="text-white font-medium font-headline tracking-wide">Zoya Hakeem</p>
+<p class="text-[11px] text-neutral-500 mt-0.5">Premium • Fashion</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-green-500/10 text-green-400 text-[10px] uppercase font-bold tracking-wider rounded-full">Active</span>
+</td>
+<td class="px-8 py-5">
+<span class="text-white font-poppins">42</span>
+</td>
+<td class="px-8 py-5 text-right">
+<div class="flex justify-end gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-white/10 rounded-full transition-colors"><span class="material-symbols-outlined text-neutral-400" data-icon="edit">edit</span></button>
+<button class="p-2 hover:bg-white/10 rounded-full transition-colors"><span class="material-symbols-outlined text-error" data-icon="delete">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors cursor-pointer group">
+<td class="px-8 py-5">
+<div class="flex items-center gap-4">
+<div class="w-12 h-16 bg-neutral-800 rounded-sm overflow-hidden flex-shrink-0">
+<img alt="Model portrait" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="portrait of a male model with sharp features, high fashion suit, dramatic rim lighting on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPRKCKTO_L-DRZcdOhUJKYxLA6Q_uKj4WmCseCGbwJdakzMmnQoijMutq-hnQ2hjGMw50Kfx8A3BeMKfUPENyvbR1Xwu606BWufqe7fZlZYMuFpWTsz7IqvGb-IUEnU9yYTcTcPdx3k0S2NEsW2BAtureqAVc4JquyiQm5bk-qLYpMZn-9A7J26zIg-0aNYFOjOrhscW0_baOcqc71H496TgSsS5IJ8L8efrmUjDCaKygIqrORx0G6as4D5_aAbkXrWNozXGQW9Lo"/>
+</div>
+<div>
+<p class="text-white font-medium font-headline tracking-wide">Rayan Dar</p>
+<p class="text-[11px] text-neutral-500 mt-0.5">Elite • Commercial</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-primary-container/10 text-primary-container text-[10px] uppercase font-bold tracking-wider rounded-full">On-Set</span>
+</td>
+<td class="px-8 py-5">
+<span class="text-white font-poppins">15</span>
+</td>
+<td class="px-8 py-5 text-right">
+<div class="flex justify-end gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-white/10 rounded-full transition-colors"><span class="material-symbols-outlined text-neutral-400" data-icon="edit">edit</span></button>
+<button class="p-2 hover:bg-white/10 rounded-full transition-colors"><span class="material-symbols-outlined text-error" data-icon="delete">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors cursor-pointer group">
+<td class="px-8 py-5">
+<div class="flex items-center gap-4">
+<div class="w-12 h-16 bg-neutral-800 rounded-sm overflow-hidden flex-shrink-0">
+<img alt="Model portrait" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="elegant female model with high fashion look, natural sunlight through soft drapery, ethereal mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQWbquYYj3ZN12ANoAW7f5SJYnC3B3ff0lDk91FNwgt6GoZTH5Ho0taYxNiHpEE0_Ie4-XyUWsZDy-BT2osCksBBAYsf-tIAH0N6dD8mQ1aJT2ap-DcZh3p81HBiiU47Zc-RSQqC_nkoLjEkad5sA-5o4pX_OHOABlVeryIY46g_iuVpqKruZScaurRyVbRFH16ku16AIg_ifV4UirCzSLYwo_JL7NHfsVv-rR3mvbbyt03YEzpZ7nj7Jtqjqv2_mXYD3_7UTm0jY"/>
+</div>
+<div>
+<p class="text-white font-medium font-headline tracking-wide">Inaya Shah</p>
+<p class="text-[11px] text-neutral-500 mt-0.5">Classic • Runway</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-neutral-700/30 text-neutral-500 text-[10px] uppercase font-bold tracking-wider rounded-full">Inactive</span>
+</td>
+<td class="px-8 py-5">
+<span class="text-white font-poppins">8</span>
+</td>
+<td class="px-8 py-5 text-right">
+<div class="flex justify-end gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-white/10 rounded-full transition-colors"><span class="material-symbols-outlined text-neutral-400" data-icon="edit">edit</span></button>
+<button class="p-2 hover:bg-white/10 rounded-full transition-colors"><span class="material-symbols-outlined text-error" data-icon="delete">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Recent Booking Requests -->
+<section class="space-y-6">
+<div class="flex justify-between items-end">
+<div>
+<h2 class="font-display text-3xl text-white">Recent Requests</h2>
+<p class="text-neutral-500 mt-1 font-body">Incoming high-value projects</p>
+</div>
+<button class="text-primary-container text-xs font-medium uppercase tracking-widest flex items-center gap-2 hover:underline">
+                        View All Requests
+                        <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Request Card 1 -->
+<div class="surface-container-low p-8 rounded-xl border-l-2 border-primary-container/30 hover:border-primary-container transition-all group">
+<div class="flex justify-between mb-6">
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-neutral-600 font-poppins">Campaign</span>
+<span class="text-primary-container font-poppins font-bold text-lg">$4,200</span>
+</div>
+<h4 class="text-white font-headline text-xl mb-1">Vogue India Editorial</h4>
+<p class="text-neutral-400 text-sm mb-6">Client: Condé Nast Publications</p>
+<div class="flex items-center gap-3 mb-8">
+<img class="w-8 h-8 rounded-full object-cover grayscale" data-alt="close up of a professional fashion model face, dark aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ9J9IqpFUc-4radkBe6ZJVDc9ChSV8KHUcoDstAo7XClXPShzGbN8qOecrkmp8DTIXreZRyv1GpZtG3J8FObxOunAsBngShFIeHzSRWUWWy-D23TU6kpN9p7Fz5RYY0n-JHBKHV2Gk15hc_sNgZQLR1uO-7e3RE3REIOw4EMIimSr97Af-_wMz1blESSzQxpdvVYSca_kzSa6KIzeksJ7TwTWgUgtKgCyp5nTvooGJxrTu7kOOLfi14Ojx1cfTVG-VfSN58k-FbU"/>
+<div>
+<p class="text-xs text-neutral-500">Requested Model</p>
+<p class="text-xs text-white font-medium">Zoya Hakeem</p>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 py-2 text-[10px] font-bold uppercase tracking-widest border border-white/5 rounded hover:bg-white/5 transition-colors">Decline</button>
+<button class="flex-1 py-2 text-[10px] font-bold uppercase tracking-widest bg-white/10 text-white rounded hover:bg-white/20 transition-colors">Approve</button>
+</div>
+</div>
+<!-- Request Card 2 -->
+<div class="surface-container-low p-8 rounded-xl border-l-2 border-primary-container/30 hover:border-primary-container transition-all group">
+<div class="flex justify-between mb-6">
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-neutral-600 font-poppins">Runway</span>
+<span class="text-primary-container font-poppins font-bold text-lg">$2,800</span>
+</div>
+<h4 class="text-white font-headline text-xl mb-1">Bridal Couture Week</h4>
+<p class="text-neutral-400 text-sm mb-6">Client: Heritage House</p>
+<div class="flex items-center gap-3 mb-8">
+<img class="w-8 h-8 rounded-full object-cover grayscale" data-alt="elegant female face, portrait lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoyNgqlCoIu3gUgCC8u1t8Ag5oGZ1wIZ275evMIqDeoohBabijjKaXSQ0Kd9y8jEeegWL5Gt-JjjLG5nt39DXGBPJ2WuwjgTVYpt6ZD2DWW8aXYAMkw00IRs0UhdDL-TbkJVKH3Zn2t9oyMMMQ7-n-bq60UvqgdhGKDICziRtckQAsWz35nalg3Tssh0ieOuo3OFFRbt4t67javroFErZ_WrOB4CXXrq65T5bHygrfyUYJJF-MhFwsRvhdrD6MvMgwiLKgoziYvF8"/>
+<div>
+<p class="text-xs text-neutral-500">Requested Model</p>
+<p class="text-xs text-white font-medium">Inaya Shah</p>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 py-2 text-[10px] font-bold uppercase tracking-widest border border-white/5 rounded hover:bg-white/5 transition-colors">Decline</button>
+<button class="flex-1 py-2 text-[10px] font-bold uppercase tracking-widest bg-white/10 text-white rounded hover:bg-white/20 transition-colors">Approve</button>
+</div>
+</div>
+<!-- Request Card 3 -->
+<div class="surface-container-low p-8 rounded-xl border-l-2 border-primary-container/30 hover:border-primary-container transition-all group">
+<div class="flex justify-between mb-6">
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-neutral-600 font-poppins">Commercial</span>
+<span class="text-primary-container font-poppins font-bold text-lg">$1,500</span>
+</div>
+<h4 class="text-white font-headline text-xl mb-1">Lux Resorts Campaign</h4>
+<p class="text-neutral-400 text-sm mb-6">Client: Khyber Wellness</p>
+<div class="flex items-center gap-3 mb-8">
+<img class="w-8 h-8 rounded-full object-cover grayscale" data-alt="male model face close up, dramatic high key lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNf_VYIph0jNuQ5lCfSe0DkuhIlY0Axp9GG2_dbYbkh4TtYS7y0MKi0GnrZLxbZL0bTEjMguj5b30RE6rtCoZI-XdqTFK1rt74Ie4mobFqUfACZxR9HichLQsF_gzXluzCvROX3SUC1299u1Al5dSHdwjXk2ttMSy10xzzcrtUykpO2hH08WzBqHBhhG5REJnFMXW-310y0TxCxynpibT6IxdOd_8eKQ449LmA_T6PZ3ZgV1gRCletV64s8DuOcq_WQOeoPvMDMWY"/>
+<div>
+<p class="text-xs text-neutral-500">Requested Model</p>
+<p class="text-xs text-white font-medium">Rayan Dar</p>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 py-2 text-[10px] font-bold uppercase tracking-widest border border-white/5 rounded hover:bg-white/5 transition-colors">Decline</button>
+<button class="flex-1 py-2 text-[10px] font-bold uppercase tracking-widest bg-white/10 text-white rounded hover:bg-white/20 transition-colors">Approve</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Contextual FAB (Suppressed on Admin Dashboard per guidelines, but keeping consistent with "Task-Focused" rule if it were a sub-page) -->
+</body></html>

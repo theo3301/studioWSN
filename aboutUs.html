@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | The Digital Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#313030",
+              "inverse-surface": "#e5e2e1",
+              "on-surface-variant": "#d1c6ab",
+              "surface-bright": "#3a3939",
+              "on-secondary-fixed": "#1b1c1c",
+              "on-surface": "#e5e2e1",
+              "on-tertiary": "#00363e",
+              "tertiary-container": "#33e4ff",
+              "tertiary-fixed-dim": "#15daf4",
+              "on-tertiary-fixed-variant": "#004e59",
+              "on-tertiary-container": "#006270",
+              "on-secondary": "#303030",
+              "surface-container-lowest": "#0e0e0e",
+              "primary-fixed-dim": "#eec200",
+              "on-secondary-container": "#b7b5b4",
+              "surface": "#131313",
+              "surface-variant": "#353534",
+              "on-primary-fixed-variant": "#574500",
+              "secondary-container": "#474746",
+              "tertiary-fixed": "#a0efff",
+              "on-error": "#690005",
+              "surface-dim": "#131313",
+              "secondary": "#c8c6c5",
+              "on-tertiary-fixed": "#001f25",
+              "on-primary-fixed": "#231b00",
+              "primary-container": "#facc15",
+              "error": "#ffb4ab",
+              "on-primary-container": "#6c5700",
+              "outline-variant": "#4d4632",
+              "inverse-primary": "#735c00",
+              "on-primary": "#3c2f00",
+              "on-error-container": "#ffdad6",
+              "primary-fixed": "#ffe083",
+              "on-background": "#e5e2e1",
+              "on-secondary-fixed-variant": "#474746",
+              "tertiary": "#c7f5ff",
+              "secondary-fixed-dim": "#c8c6c5",
+              "surface-container-high": "#2a2a2a",
+              "error-container": "#93000a",
+              "surface-tint": "#eec200",
+              "background": "#131313",
+              "surface-container": "#201f1f",
+              "surface-container-highest": "#353534",
+              "outline": "#9a9078",
+              "primary": "#ffecb9",
+              "secondary-fixed": "#e4e2e1",
+              "surface-container-low": "#1c1b1b"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Manrope', sans-serif;
+            overflow-x: hidden;
+        }
+        .serif-italic { font-family: 'Noto Serif', serif; font-style: italic; }
+        .text-ink-gold {
+            background: linear-gradient(to right, #ffecb9, #facc15);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-xl shadow-2xl shadow-black/50 flex justify-between items-center px-12 h-20 w-full">
+<div class="text-2xl font-serif font-bold text-yellow-400 tracking-tighter">The Digital Atelier</div>
+<div class="hidden md:flex items-center space-x-12 font-serif italic tracking-tight">
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors duration-500" href="#">Models</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors duration-500" href="#">Catalog</a>
+<a class="text-yellow-400 border-b border-yellow-400/30 pb-1" href="#">About</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors duration-500" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-zinc-400 hover:text-yellow-200 transition-all duration-300">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="px-6 py-2 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:scale-105">
+                Login
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section: Curation Beyond Frontiers -->
+<section class="relative h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60 scale-105" data-alt="striking high-fashion model posing in architectural shadow, dramatic high-contrast lighting, editorial avant-garde style, moody monochrome palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlWLBxiee4W0IfzC2SQgJxLJZdM50pTUO-WCUUz0kpqX86xh1M1ZZ5tMmodHuKNKd1JWk-GKBLkwWF9IrBLNnt4V7zdmkYb9gLXjRtJADyeWUQOPt94CQVyJxiGeuXd3yStZPOmsRdMClsTfm5Y1GSYETlnQwmdPjZzxVXK2tT9PpHeClnwthGe7NPo_yEXpcQ_QBLA4EfBGmct8EmN-OpOGa_XUOCs08Aud91YD91-DE2fXjUc0fHOP2BmlJHrvvZWyJ1_fdeJ9g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="container mx-auto px-12 relative z-10">
+<div class="max-w-4xl">
+<span class="text-primary-container font-label tracking-[0.3em] uppercase text-xs mb-6 block">Legacy of Srinagar</span>
+<h1 class="text-7xl md:text-9xl font-headline italic tracking-tighter text-white mb-8">
+                        Curation <br/>
+<span class="text-ink-gold">Beyond Frontiers</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-xl font-body leading-relaxed">
+                        Established at the intersection of heritage and high-fashion, Srinagar Models Agency represents the evolution of global aesthetics.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Our Mission: The Art of Representation -->
+<section class="py-32 bg-surface">
+<div class="container mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-5 order-2 md:order-1">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary-container/10 blur-2xl group-hover:bg-primary-container/20 transition-all duration-700"></div>
+<img class="relative w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition-all duration-1000" data-alt="portrait of a confident female founder in a tailored charcoal suit, minimalist background, soft cinematic side lighting, sophisticated aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9hq6OfUD13j9J4RBWBrSAlXP9L3vEqN40DSuytlnFIr1AmHpJehDH9YmnfZBV0UkB4warY-OjaOTXv3wLwjqak-ZyS3evVNk83uLNa6Q9eBHjG46I_hmJ1VD23zOk12X6pMv3TSDyA623RWKg1upkzFwdscGYYYCHCAZlgiH3e9bk6ABCK3kUxN9drWXaCNu4Gw3veqaXygIPPhhlq2A9JRDRALtNwVpABMx56rrWZbEtf4OpJmcsyCjcLm--G3FHRb30ChXmW0s"/>
+<div class="absolute bottom-6 -right-8 bg-surface-container-high p-8 shadow-2xl">
+<span class="block text-4xl font-headline text-primary-container">12+</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Global Fashion Capitals</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-7 order-1 md:order-2 space-y-12">
+<div>
+<h2 class="text-5xl font-headline text-white mb-6">The Art of <br/><span class="italic serif-italic">Representation</span></h2>
+<div class="w-24 h-px bg-primary-container/40 mb-10"></div>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+                                At Srinagar, we do not simply manage talent; we architect careers. Our philosophy is rooted in the belief that every face tells a story that transcends borders. We seek the unconventional, the authentic, and the sublime.
+                            </p>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                                Our mission is to bridge the gap between regional identity and international luxury standards, curating a portfolio that reflects the true diversity of modern beauty.
+                            </p>
+</div>
+<div class="grid grid-cols-2 gap-8 pt-10 border-t border-outline-variant/20">
+<div>
+<h4 class="text-white font-headline text-xl mb-3 italic">Visionary Scouting</h4>
+<p class="text-sm text-zinc-500">Finding the unseen beauty in every corner of the globe.</p>
+</div>
+<div>
+<h4 class="text-white font-headline text-xl mb-3 italic">Strategic Growth</h4>
+<p class="text-sm text-zinc-500">Curating long-term trajectories for sustainable prestige.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Philosophy: Bento Layout -->
+<section class="py-32 bg-surface-container-low">
+<div class="container mx-auto px-12">
+<div class="mb-20 text-center">
+<h2 class="text-4xl font-headline italic text-white mb-4">Our Core Philosophy</h2>
+<p class="text-zinc-500 tracking-widest uppercase text-[10px]">The pillars of our atelier</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Column 1 -->
+<div class="md:col-span-1 space-y-8">
+<div class="bg-surface-container-high p-10 h-80 flex flex-col justify-end group transition-all duration-500 hover:bg-surface-container-highest">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 transition-transform duration-500 group-hover:-translate-y-2">diamond</span>
+<h3 class="text-2xl font-headline text-white mb-4">Precision</h3>
+<p class="text-zinc-400 text-sm leading-relaxed">Every booking, every placement, and every image is handled with meticulous attention to brand alignment.</p>
+</div>
+<div class="relative h-[500px] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" data-alt="high fashion editorial shot of model wearing luxury silk garments, movement and texture emphasized, warm golden studio light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATk3aq8u5UF3E_dCzMDNvlH5o_IkluQ4993afy_MAjzTxu97xzYR-TlvTwGugZb47RccGkVIrdTYuCVtVJ3pyBcahCdGnfKTowcv5PjI8u-iXw-p9vzf_b9pvMpbSRCltTIfQH2K47Xp8O9n4QtQob3Ais58_LECDxxHmb_Aoe-oSqeJkuIT6kaWrYEjew2LZ7jZntM1dp6Q74zB1yHIEWAfkGlP3zjdBW3r_Pp8K-ruvfBSCSt4WS61dplLJLzU0-gmnoPXPqYNc"/>
+</div>
+</div>
+<!-- Column 2 -->
+<div class="md:col-span-1 space-y-8 pt-12">
+<div class="relative h-[400px] overflow-hidden">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 hover:scale-110" data-alt="editorial street style photography, model in minimalist oversized fashion, urban backdrop with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPKHoBGGYkaLQLswydJhqT8L--MKenIkfpU8dILuZaKYKfpa5QSTog5TYzCtB4MLE-A80KFZl09KD6ESoz0VhLPTgvHGWS2o-oXuMtyF7jgxTrOn-_2X5MX0lKWP4ygONHq3IFmDVacDTPIzP_yKdvJc0ykmAQvAIf7yhp6JfdEdBQ0YA5FEkZJp__iCwJfG5U8hAi1CtUPjCZkzc7q_-hAw5sG8KMg1LXiRSXRGZzuNrT_OwW-ehBw1hnVe-FMomO2lM_R64tA1g"/>
+</div>
+<div class="bg-primary-container p-10 h-96 flex flex-col justify-between">
+<span class="text-on-primary font-bold text-6xl opacity-20 italic">02</span>
+<div>
+<h3 class="text-3xl font-headline text-on-primary mb-4">Global Reach</h3>
+<p class="text-on-primary-container text-sm leading-relaxed">A network that spans from Paris to Tokyo, ensuring our models reach the most prestigious stages in the world.</p>
+</div>
+</div>
+</div>
+<!-- Column 3 -->
+<div class="md:col-span-1 space-y-8">
+<div class="bg-surface-container-high p-10 h-80 flex flex-col justify-end group transition-all duration-500 hover:bg-surface-container-highest">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 transition-transform duration-500 group-hover:-translate-y-2">auto_awesome</span>
+<h3 class="text-2xl font-headline text-white mb-4">Authenticity</h3>
+<p class="text-zinc-400 text-sm leading-relaxed">We champion the unique traits that make our talent stand out. Imperfection is the highest form of beauty.</p>
+</div>
+<div class="relative h-[500px] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" data-alt="close-up portrait of model with unique features, intense gaze, cinematic lighting, emphasizing skin texture and details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDheXO7SI_rSmYd3HyVEx7JNtS_XM1h7cq6tbMj_x8USo1FTolY7DlFABn3haL-vghWNRIwfxcTKCJ0ZopK0wRWbKPu1k4MahutzjcTSFm9p1zyML0UlC5ynJfb_dm1P7Hwa4JYz1ldxEHmhlUFMjaO8BA5AEBeNRS3npMd0ONahZkLqAVpn_1Is2xh_7DWXx-HKYcYqczKCR2bPReX-T9p5lsCBOILByJchgDPbOBbhPVpsVd-tGAiXqiqSOpkOLcNL4bF87vbkbw"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Team: Expert Curators -->
+<section class="py-32 bg-surface">
+<div class="container mx-auto px-12">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-6xl font-headline text-white mb-6">The Curators</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Meet the visionaries behind the lens. Our team consists of former designers, photographers, and strategists dedicated to the art of representation.</p>
+</div>
+<a class="group flex items-center gap-4 text-primary font-label uppercase tracking-widest text-sm mb-2" href="#">
+                        Join our team <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<!-- Team Member 1 -->
+<div class="group">
+<div class="relative overflow-hidden aspect-[4/5] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="portrait of creative director, middle-aged man with sharp features, wearing black turtleneck, sophisticated artistic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChYGWfYY-CF9EO2HuTeDR29t9__zD5ewnxlrzl0PpxO0_t8Vj0OIv-3j1uYtM-BQnOslkKiV6kK3-H6h2DqK-TAmzynfSGf-KXPQeb19M1MtpHRERivqDOZBJgTLSiRepYf0WxUTdRG1_kCsA35ls2yGM_tpIiWJwnlvSMlm3LgZ1KCT74JXvtf5PSgeyFHnyeJvJ5H6URLnu7i8wpnhIsfXKcNNyqgejwKuAljPLiTruBTJDSTeXSVSLbLbrQluSulmrj8P7W9-Y"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+<span class="text-white text-xs tracking-widest border border-white/30 px-4 py-2 uppercase">Creative Director</span>
+</div>
+</div>
+<h4 class="text-white font-headline text-xl">Julian Vane</h4>
+<p class="text-zinc-500 text-xs uppercase tracking-widest mt-1">Founder &amp; Lead Curator</p>
+</div>
+<!-- Team Member 2 -->
+<div class="group">
+<div class="relative overflow-hidden aspect-[4/5] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="portrait of female head of scouting, professional attire, modern minimalist aesthetic, soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSWZU_c6VBKJ4AD48DYzl_b1l3yNzN-JPGBOX8rOvR2DLd48dJ8F0wNUcHjIyI6vgFheDVaLKnI3yV4IR9doNDsRSgUWTqXC34addWj3U57KkD1aGP_a0_hppjxCx3ReokUHThsAYE7Czm6agKyUK5wAXmsJp6Lr0YUWwDYSa-Hm7mHlRaGIyJz1SCrkslVvSYgpgoqPdb-crCD6IYc7Djs2SmDZe1EwPKdz9-CJHLTlvCMDFCQxv0uauZan0uQibqwoxD7HRr-9Q"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+<span class="text-white text-xs tracking-widest border border-white/30 px-4 py-2 uppercase">Head of Scouting</span>
+</div>
+</div>
+<h4 class="text-white font-headline text-xl">Elena Roche</h4>
+<p class="text-zinc-500 text-xs uppercase tracking-widest mt-1">Global Talent Scout</p>
+</div>
+<!-- Team Member 3 -->
+<div class="group">
+<div class="relative overflow-hidden aspect-[4/5] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="portrait of male strategy lead, wearing designer glasses, professional workspace background, cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcIK4PF5xPg-YKQS4zTtbISm9iRQy1OcwlMPzmFoZUOuU2xdTFn16ofRo9q6ORz0b8Bm8YCBIE0LzSFC_1DrO5YOUIxfoIdn9lUd7a_eJolii-MfLJ7DfyE1o7DMvONhVMdHBqw72NRzDWFL5_PTp5QGiG4IUusME6pRGx_h-XOb-_H3WfEQt8x372jV0NyhEboPsdaUTil8e8bMoSoqi03707odqZF5NZ6ETwSeo4CiR-TUBuuLGuZBtj8OmslP_QaoLMqmJdcow"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+<span class="text-white text-xs tracking-widest border border-white/30 px-4 py-2 uppercase">Strategy Lead</span>
+</div>
+</div>
+<h4 class="text-white font-headline text-xl">Marcus Thorne</h4>
+<p class="text-zinc-500 text-xs uppercase tracking-widest mt-1">Brand Strategist</p>
+</div>
+<!-- Team Member 4 -->
+<div class="group">
+<div class="relative overflow-hidden aspect-[4/5] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="portrait of female digital lead, edgy style, colorful accent lighting, modern creative studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzSq2yavpk7gT0764RLplALrbI5Vy8X0fIAKk4NuPCBr7l32g2QvmrX6gIrwgss7R4q_f-xed2VKqeuusKXb4QcdEYwVOZON4wmwdvpXIvDoV9aul7r4IqPa68AAkBYLt4TXX_dspOR630isOS6ENFiJqiOiLMTUbrAe--ThOkLiD6hZxUJ5Mwd_2qiY-DVjumdZBgq_YlhJHZRraxz2kLGMA-Zb17hY1eqsW8X8ve9VBxgLwdG8jXyCc2fcsOPDtyPp1OPkKAOxU"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+<span class="text-white text-xs tracking-widest border border-white/30 px-4 py-2 uppercase">Digital Lead</span>
+</div>
+</div>
+<h4 class="text-white font-headline text-xl">Sasha Kroll</h4>
+<p class="text-zinc-500 text-xs uppercase tracking-widest mt-1">Casting Director</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-surface-container-low border-t border-outline-variant/10">
+<div class="container mx-auto px-12 text-center">
+<h3 class="text-4xl md:text-5xl font-headline italic text-white mb-10">Start Your Journey with The Atelier</h3>
+<div class="flex flex-col md:flex-row justify-center gap-6">
+<button class="px-12 py-5 bg-primary-container text-on-primary font-bold tracking-widest uppercase text-sm hover:scale-105 transition-all">Apply to Represent</button>
+<button class="px-12 py-5 border border-outline-variant/30 text-white font-bold tracking-widest uppercase text-sm hover:bg-white hover:text-black transition-all">Book Talent</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 w-full py-12 px-12 border-t border-zinc-800/20 flex flex-col md:flex-row justify-between items-center w-full">
+<div class="mb-6 md:mb-0">
+<span class="font-sans text-xs tracking-widest uppercase text-zinc-600">© 2024 THE DIGITAL ATELIER. ALL RIGHTS RESERVED.</span>
+</div>
+<div class="flex space-x-8">
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-600 hover:text-yellow-400 transition-colors" href="#">Privacy Policy</a>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-600 hover:text-yellow-400 transition-colors" href="#">Terms of Service</a>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-600 hover:text-yellow-400 transition-colors" href="#">Press Enquiries</a>
+</div>
+</footer>
+</body></html>
